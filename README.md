@@ -1,2 +1,2 @@
-# NuAT
-Nuclear Norm Adversarial Training 
+# Nuclear Norm Adversarial Training (NuAT)
+
