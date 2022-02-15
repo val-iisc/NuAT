@@ -30,7 +30,10 @@ In single-step Nuclear Norm Adversarial Training (NuAT), the following loss func
 <p align="center">
 <!-- $ L = \ell_{CE}(f_{\theta} (X) , Y ) + \lambda \cdot || f_{\theta} (\widetilde{X}) -  f_{\theta} (X) ||_* $ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/BvQyr5JUH6.svg">
 </p>
+
+<p align="left">
 The first term in the above equation corresponds to the cross-entropy loss on clean samples, and the second term corresponds to the Nuclear-Norm of the difference in pre-softmax values of clean images <!-- $X$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/miWphOh1Im.svg"> and their corresponding single-step adversaries <!-- $\widetilde{X}$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/VoPGwP1wdG.svg">.
+</p>
 
 
 ## Results on CIFAR-10
