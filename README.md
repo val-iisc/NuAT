@@ -1,6 +1,7 @@
 # Towards Efficient and Effective Adversarial Training
 
-This repository contains code for the implementation of our NeurIPS 2021 paper titled "Towards Efficient and Effective Adversarial Training". Our paper is available [here](https://papers.nips.cc/paper/2021/hash/62889e73828c756c961c5a6d6c01a463-Abstract.html).
+This repository contains code for the implementation of our NeurIPS 2021 paper [Towards Efficient and Effective Adversarial Training](https://papers.nips.cc/paper/2021/hash/62889e73828c756c961c5a6d6c01a463-Abstract.html). 
+Accompanying resources can be found here: [[video](https://neurips.cc/virtual/2021/poster/26270)] [[poster](https://drive.google.com/file/d/1dZRYOPIVM0nU1y502OlwoLd3a6DOMCus/view?usp=sharing)]
 
 - We propose single-step Nuclear Norm Adversarial Training (NuAT), and a two step variant
 of the same (NuAT2), coupled with a novel cyclic-step learning rate schedule, to achieve
@@ -27,7 +28,7 @@ $$ \widetilde{L} = \ell_{CE}(f_{\theta} (X + \Delta) , Y ) + \lambda \cdot || f_
 In single-step Nuclear Norm Adversarial Training (NuAT), the following loss function is minimized during training:
 $$ L = \ell_{CE}(f_{\theta} (X) , Y ) + \lambda \cdot || f_{\theta} (\widetilde{X}) -  f_{\theta} (X) ||_* $$
 
-The first term in the above equation corresponds to the cross-entropy loss on clean samples, and the second term corresponds to Nuclear-Norm of difference in pre-softmax values of clean images $X$ and their corresponding single-step adversaries $\widetilde{X}$.
+The first term in the above equation corresponds to the cross-entropy loss on clean samples, and the second term corresponds to the Nuclear-Norm of the difference in pre-softmax values of clean images $X$ and their corresponding single-step adversaries $\widetilde{X}$.
 
 
 ## Results on CIFAR-10
