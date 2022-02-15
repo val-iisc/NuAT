@@ -22,13 +22,15 @@ Trained model checkpoints can be found [here](https://drive.google.com/drive/fol
 
 In this work, we propose a novel Nuclear Norm regularizer to improve the adversarial robustness of Deep Networks through the use of single-step adversarial training. Training with the proposed Nuclear Norm regularizer enforces function smoothing in the vicinity of clean samples by incorporating joint batch-statistics of adversarial samples, thereby resulting in enhanced robustness.
 
-Nuclear-Norm based Attack: In a given minibatch, we consider $X$ to be the matrix composed of vectorized pixel values (arranged row-wise) of each image, $\Delta$ to be a matrix of the same dimension as $X$ consisting of independently sampled Bernoulli noise, and $Y$ to be the matrix containing the corresponding ground truth one-hot vectors. The following loss function which utilizes the pre-softmax values $f_\theta(.)$ is maximized for the generation of single-step adversaries: 
-$$ \widetilde{L} = \ell_{CE}(f_{\theta} (X + \Delta) , Y ) + \lambda \cdot || f_{\theta} (X+\Delta) - f_{\theta} (X) ||_*$$
-
+Nuclear-Norm based Attack: In a given minibatch, we consider <!-- $X$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/miWphOh1Im.svg"> to be the matrix composed of vectorized pixel values (arranged row-wise) of each image, <!-- $\Delta$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/nanyV6oorW.svg"> to be a matrix of the same dimension as <!-- $X$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/miWphOh1Im.svg"> consisting of independently sampled Bernoulli noise, and <!-- $Y$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/p3UjlHTJ14.svg"> to be the matrix containing the corresponding ground truth one-hot vectors. The following loss function which utilizes the pre-softmax values <!-- $f_\theta(.)$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/zVlXjLg1P0.svg"> is maximized for the generation of single-step adversaries: 
+<p align="center">
+<!-- $ \widetilde{L} = \ell_{CE}(f_{\theta} (X + \Delta) , Y ) + \lambda \cdot || f_{\theta} (X+\Delta) - f_{\theta} (X) ||_*$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/K6D1KWHxjq.svg">
+</p>
 In single-step Nuclear Norm Adversarial Training (NuAT), the following loss function is minimized during training:
-$$ L = \ell_{CE}(f_{\theta} (X) , Y ) + \lambda \cdot || f_{\theta} (\widetilde{X}) -  f_{\theta} (X) ||_* $$
-
-The first term in the above equation corresponds to the cross-entropy loss on clean samples, and the second term corresponds to the Nuclear-Norm of the difference in pre-softmax values of clean images $X$ and their corresponding single-step adversaries $\widetilde{X}$.
+<p align="center">
+<!-- $ L = \ell_{CE}(f_{\theta} (X) , Y ) + \lambda \cdot || f_{\theta} (\widetilde{X}) -  f_{\theta} (X) ||_* $ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/BvQyr5JUH6.svg">
+</p>
+The first term in the above equation corresponds to the cross-entropy loss on clean samples, and the second term corresponds to the Nuclear-Norm of the difference in pre-softmax values of clean images <!-- $X$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/miWphOh1Im.svg"> and their corresponding single-step adversaries <!-- $\widetilde{X}$ --> <img style="transform: translateY(0.1em); background: white;" src="./svg/VoPGwP1wdG.svg">.
 
 
 ## Results on CIFAR-10
